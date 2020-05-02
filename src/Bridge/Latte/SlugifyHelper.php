@@ -1,13 +1,13 @@
 <?php
 
-namespace Cocur\Slugify\Bridge\Latte;
+namespace XisoDev\Slugify\Bridge\Latte;
 
-use Cocur\Slugify\SlugifyInterface;
+use XisoDev\Slugify\SlugifyInterface;
 
 /**
  * SlugifyHelper
  *
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Lukáš Unger <looky.msc@gmail.com>
  * @license    http://www.opensource.org/licenses/MIT The MIT License

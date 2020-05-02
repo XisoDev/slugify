@@ -1,5 +1,5 @@
 {
-    "name": "cocur/slugify",
+    "name": "xisodev/slugify",
     "type": "library",
     "description": "Converts a string into a slug.",
     "keywords": [
@@ -8,6 +8,10 @@
     ],
     "license": "MIT",
     "authors": [
+        {
+            "name": "xiso",
+            "email": "xiso@amuz.co.kr"
+        },
         {
             "name": "Florian Eckerstorfer",
             "email": "florian@eckerstorfer.co",
@@ -48,12 +52,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Cocur\\Slugify\\": "src"
+            "XisoDev\\Slugify\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Cocur\\Slugify\\Tests\\": "tests"
+            "XisoDev\\Slugify\\Tests\\": "tests"
         }
     }
 }

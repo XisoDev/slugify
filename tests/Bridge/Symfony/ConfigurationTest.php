@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the cocur/slugify package.
+ * This file is part of the xisodev/slugify package.
  *
  * (c) Enrico Stahn <enrico.stahn@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Tests\Bridge\Symfony;
+namespace XisoDev\Slugify\Tests\Bridge\Symfony;
 
-use Cocur\Slugify\Bridge\Symfony\Configuration;
+use XisoDev\Slugify\Bridge\Symfony\Configuration;
 use Symfony\Component\Config\Definition\Processor;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 

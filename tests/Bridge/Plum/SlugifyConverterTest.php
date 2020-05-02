@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Tests\Bridge\Plum;
+namespace XisoDev\Slugify\Tests\Bridge\Plum;
 
-use Cocur\Slugify\Bridge\Plum\SlugifyConverter;
+use XisoDev\Slugify\Bridge\Plum\SlugifyConverter;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
 /**
  * SlugifyConverterTest
  *
- * @package   Cocur\Slugify\Bridge\Plum
+ * @package   XisoDev\Slugify\Bridge\Plum
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2012-2015 Florian Eckerstorfer
  * @group     unit
@@ -26,12 +26,12 @@ use Mockery\Adapter\Phpunit\MockeryTestCase;
 class SlugifyConverterTest extends MockeryTestCase
 {
     /**
-     * @covers \Cocur\Slugify\Bridge\Plum\SlugifyConverter::__construct()
-     * @covers \Cocur\Slugify\Bridge\Plum\SlugifyConverter::convert()
+     * @covers \XisoDev\Slugify\Bridge\Plum\SlugifyConverter::__construct()
+     * @covers \XisoDev\Slugify\Bridge\Plum\SlugifyConverter::convert()
      */
     public function testConvertSlugifiesString()
     {
-        $slugify = Mockery::mock('Cocur\Slugify\SlugifyInterface');
+        $slugify = Mockery::mock('XisoDev\Slugify\SlugifyInterface');
         $slugify->shouldReceive('slugify')->with('Hello World')->once()->andReturn('hello_world');
         $converter = new SlugifyConverter($slugify);
 
@@ -39,8 +39,8 @@ class SlugifyConverterTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\Plum\SlugifyConverter::__construct()
-     * @covers \Cocur\Slugify\Bridge\Plum\SlugifyConverter::convert()
+     * @covers \XisoDev\Slugify\Bridge\Plum\SlugifyConverter::__construct()
+     * @covers \XisoDev\Slugify\Bridge\Plum\SlugifyConverter::convert()
      */
     public function testConstructorCreatesSlugifyIfNoneIsProvided()
     {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Bridge\Laravel;
+namespace XisoDev\Slugify\Bridge\Laravel;
 
-use Cocur\Slugify\Slugify;
+use XisoDev\Slugify\Slugify;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 /**
  * SlugifyServiceProvider
  *
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @author     Colin Viebrock

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the cocur/slugify package.
+ * This file is part of the xisodev/slugify package.
  *
  * (c) Enrico Stahn <enrico.stahn@gmail.com>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Bridge\Symfony;
+namespace XisoDev\Slugify\Bridge\Symfony;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -21,13 +21,13 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('cocur_slugify');
+        $treeBuilder = new TreeBuilder('xisodev_slugify');
 
         // Keep compatibility with symfony/config < 4.2
         if (\method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
-            $rootNode = $treeBuilder->root('cocur_slugify');
+            $rootNode = $treeBuilder->root('xisodev_slugify');
         }
 
         $rootNode

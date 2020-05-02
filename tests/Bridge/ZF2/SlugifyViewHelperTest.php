@@ -1,13 +1,13 @@
 <?php
-namespace Cocur\Slugify\Tests\Bridge\ZF2;
+namespace XisoDev\Slugify\Tests\Bridge\ZF2;
 
-use Cocur\Slugify\Bridge\ZF2\SlugifyViewHelper;
-use Cocur\Slugify\Slugify;
+use XisoDev\Slugify\Bridge\ZF2\SlugifyViewHelper;
+use XisoDev\Slugify\Slugify;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
 /**
  * Class SlugifyViewHelperTest
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @license    http://www.opensource.org/licenses/MIT The MIT License
  */
@@ -23,7 +23,7 @@ class SlugifyViewHelperTest extends MockeryTestCase
     private $slugify;
 
     /**
-     * @covers \Cocur\Slugify\Bridge\ZF2\SlugifyViewHelper::__construct()
+     * @covers \XisoDev\Slugify\Bridge\ZF2\SlugifyViewHelper::__construct()
      */
     protected function setUp()
     {
@@ -32,7 +32,7 @@ class SlugifyViewHelperTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\ZF2\SlugifyViewHelper::__invoke()
+     * @covers \XisoDev\Slugify\Bridge\ZF2\SlugifyViewHelper::__invoke()
      */
     public function testInvoke()
     {

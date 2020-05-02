@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,23 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Bridge\Symfony;
+namespace XisoDev\Slugify\Bridge\Symfony;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * CocurSlugifyBundle
+ * XisoDevSlugifyBundle
  *
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright  2012-2014 Florian Eckerstorfer
  * @license    http://www.opensource.org/licenses/MIT The MIT License
  */
-class CocurSlugifyBundle extends Bundle
+class XisoDevSlugifyBundle extends Bundle
 {
     public function getContainerExtension()
     {
-        return new CocurSlugifyExtension();
+        return new XisoDevSlugifyExtension();
     }
 }

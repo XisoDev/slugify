@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify;
+namespace XisoDev\Slugify;
 
 /**
  * SlugifyInterface
  *
- * @package   org.cocur.slugify
+ * @package   org.xisodev.slugify
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @author    Marchenko Alexandr
  * @copyright 2012-2014 Florian Eckerstorfer

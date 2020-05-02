@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Bridge\Twig;
+namespace XisoDev\Slugify\Bridge\Twig;
 
-use Cocur\Slugify\SlugifyInterface;
+use XisoDev\Slugify\SlugifyInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
 /**
  * SlugifyExtension
  *
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright  2012-2015 Florian Eckerstorfer

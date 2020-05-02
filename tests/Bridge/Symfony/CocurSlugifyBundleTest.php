@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,32 +9,32 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Tests\Bridge\Symfony;
+namespace XisoDev\Slugify\Tests\Bridge\Symfony;
 
-use Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle;
-use Cocur\Slugify\Bridge\Symfony\CocurSlugifyExtension;
+use XisoDev\Slugify\Bridge\Symfony\XisoDevSlugifyBundle;
+use XisoDev\Slugify\Bridge\Symfony\XisoDevSlugifyExtension;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
 /**
- * CocurSlugifyBundleTest
+ * XisoDevSlugifyBundleTest
  *
  * @category   test
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright  2012-2014 Florian Eckerstorfer
  * @license    http://www.opensource.org/licenses/MIT The MIT License
  * @group      unit
  */
-class CocurSlugifyBundleTest extends MockeryTestCase
+class XisoDevSlugifyBundleTest extends MockeryTestCase
 {
     /**
-     * @covers \Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle::getContainerExtension()
+     * @covers \XisoDev\Slugify\Bridge\Symfony\XisoDevSlugifyBundle::getContainerExtension()
      */
     public function testGetContainerExtension()
     {
-        $bundle = new CocurSlugifyBundle();
+        $bundle = new XisoDevSlugifyBundle();
 
-        static::assertInstanceOf(CocurSlugifyExtension::class, $bundle->getContainerExtension());
+        static::assertInstanceOf(XisoDevSlugifyExtension::class, $bundle->getContainerExtension());
     }
 }

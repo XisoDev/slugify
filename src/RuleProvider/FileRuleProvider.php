@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\RuleProvider;
+namespace XisoDev\Slugify\RuleProvider;
 
 /**
  * FileRuleProvider
  *
- * @package   Cocur\Slugify\RuleProvider
+ * @package   XisoDev\Slugify\RuleProvider
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  */

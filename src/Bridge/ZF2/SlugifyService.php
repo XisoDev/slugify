@@ -1,13 +1,13 @@
 <?php
 
-namespace Cocur\Slugify\Bridge\ZF2;
+namespace XisoDev\Slugify\Bridge\ZF2;
 
-use Cocur\Slugify\Slugify;
+use XisoDev\Slugify\Slugify;
 use Zend\ServiceManager\ServiceManager;
 
 /**
  * Class SlugifyService
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @license    http://www.opensource.org/licenses/MIT The MIT License
  */

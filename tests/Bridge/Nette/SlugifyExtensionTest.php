@@ -1,8 +1,8 @@
 <?php
 
-namespace Cocur\Slugify\Tests\Bridge\Nette;
+namespace XisoDev\Slugify\Tests\Bridge\Nette;
 
-use Cocur\Slugify\Bridge\Nette\SlugifyExtension;
+use XisoDev\Slugify\Bridge\Nette\SlugifyExtension;
 use Mockery as m;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
@@ -10,7 +10,7 @@ use Mockery\Adapter\Phpunit\MockeryTestCase;
  * SlugifyExtensionTest
  *
  * @category   test
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Lukáš Unger <looky.msc@gmail.com>
  * @license    http://www.opensource.org/licenses/MIT The MIT License
@@ -24,26 +24,26 @@ class SlugifyExtensionTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\Nette\SlugifyExtension::loadConfiguration()
+     * @covers \XisoDev\Slugify\Bridge\Nette\SlugifyExtension::loadConfiguration()
      */
     public function testLoadConfiguration()
     {
         $slugify = m::mock('Nette\DI\ServiceDefinition');
         $slugify
             ->shouldReceive('setClass')
-            ->with('Cocur\Slugify\SlugifyInterface')
+            ->with('XisoDev\Slugify\SlugifyInterface')
             ->once()
             ->andReturn($slugify);
         $slugify
             ->shouldReceive('setFactory')
-            ->with('Cocur\Slugify\Slugify')
+            ->with('XisoDev\Slugify\Slugify')
             ->once()
             ->andReturn($slugify);
 
         $helper = m::mock('Nette\DI\ServiceDefinition');
         $helper
             ->shouldReceive('setClass')
-            ->with('Cocur\Slugify\Bridge\Latte\SlugifyHelper')
+            ->with('XisoDev\Slugify\Bridge\Latte\SlugifyHelper')
             ->once()
             ->andReturn($helper);
         $helper
@@ -75,7 +75,7 @@ class SlugifyExtensionTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\Nette\SlugifyExtension::beforeCompile()
+     * @covers \XisoDev\Slugify\Bridge\Nette\SlugifyExtension::beforeCompile()
      */
     public function testBeforeCompile()
     {

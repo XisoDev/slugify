@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify;
+namespace XisoDev\Slugify;
 
-use Cocur\Slugify\RuleProvider\DefaultRuleProvider;
-use Cocur\Slugify\RuleProvider\RuleProviderInterface;
+use XisoDev\Slugify\RuleProvider\DefaultRuleProvider;
+use XisoDev\Slugify\RuleProvider\RuleProviderInterface;
 
 /**
  * Slugify
  *
- * @package   Cocur\Slugify
+ * @package   XisoDev\Slugify
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @author    Ivo Bathke <ivo.bathke@gmail.com>
  * @author    Marchenko Alexandr
@@ -26,7 +26,7 @@ use Cocur\Slugify\RuleProvider\RuleProviderInterface;
  */
 class Slugify implements SlugifyInterface
 {
-    const LOWERCASE_NUMBERS_DASHES = '/[^A-Za-z0-9]+/';
+    const LOWERCASE_NUMBERS_DASHES = '/[^A-Za-z0-9ㄱ-ㅎ가-힣-ㅏ-ㅣ]+/';
 
     /**
      * @var array<string,string>

@@ -1,12 +1,12 @@
 <?php
-namespace Cocur\Slugify\Tests\Bridge\ZF2;
+namespace XisoDev\Slugify\Tests\Bridge\ZF2;
 
-use Cocur\Slugify\Bridge\ZF2\Module;
+use XisoDev\Slugify\Bridge\ZF2\Module;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
 /**
  * Class ModuleTest
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @license    http://www.opensource.org/licenses/MIT The MIT License
  */
@@ -23,20 +23,20 @@ class ModuleTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\ZF2\Module::getServiceConfig()
+     * @covers \XisoDev\Slugify\Bridge\ZF2\Module::getServiceConfig()
      */
     public function testGetServiceConfig()
     {
         $smConfig = $this->module->getServiceConfig();
         $this->assertTrue(is_array($smConfig));
         $this->assertArrayHasKey('factories', $smConfig);
-        $this->assertArrayHasKey('Cocur\Slugify\Slugify', $smConfig['factories']);
+        $this->assertArrayHasKey('XisoDev\Slugify\Slugify', $smConfig['factories']);
         $this->assertArrayHasKey('aliases', $smConfig);
         $this->assertArrayHasKey('slugify', $smConfig['aliases']);
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\ZF2\Module::getViewHelperConfig()
+     * @covers \XisoDev\Slugify\Bridge\ZF2\Module::getViewHelperConfig()
      */
     public function testGetViewHelperConfig()
     {

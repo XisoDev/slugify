@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Tests\Bridge\Twig;
+namespace XisoDev\Slugify\Tests\Bridge\Twig;
 
-use Cocur\Slugify\Bridge\Twig\SlugifyExtension;
+use XisoDev\Slugify\Bridge\Twig\SlugifyExtension;
 use Mockery as m;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
@@ -19,7 +19,7 @@ use Mockery\Adapter\Phpunit\MockeryTestCase;
  * SlugifyExtensionTest
  *
  * @category   test
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright  2012-2014 Florian Eckerstorfer
@@ -29,7 +29,7 @@ use Mockery\Adapter\Phpunit\MockeryTestCase;
 class SlugifyExtensionTest extends MockeryTestCase
 {
     /**
-     * @var \Cocur\Slugify\SlugifyInterface|\Mockery\MockInterface
+     * @var \XisoDev\Slugify\SlugifyInterface|\Mockery\MockInterface
      */
     protected $slugify;
 
@@ -40,12 +40,12 @@ class SlugifyExtensionTest extends MockeryTestCase
 
     protected function setUp()
     {
-        $this->slugify = m::mock('Cocur\Slugify\SlugifyInterface');
+        $this->slugify = m::mock('XisoDev\Slugify\SlugifyInterface');
         $this->extension = new SlugifyExtension($this->slugify);
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\Twig\SlugifyExtension::getFilters()
+     * @covers \XisoDev\Slugify\Bridge\Twig\SlugifyExtension::getFilters()
      */
     public function testGetFilters()
     {
@@ -56,7 +56,7 @@ class SlugifyExtensionTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\Twig\SlugifyExtension::slugifyFilter()
+     * @covers \XisoDev\Slugify\Bridge\Twig\SlugifyExtension::slugifyFilter()
      */
     public function testSlugifyFilter()
     {

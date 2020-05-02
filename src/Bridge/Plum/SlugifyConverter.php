@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Bridge\Plum;
+namespace XisoDev\Slugify\Bridge\Plum;
 
 use Plum\Plum\Converter\ConverterInterface;
-use Cocur\Slugify\Slugify;
-use Cocur\Slugify\SlugifyInterface;
+use XisoDev\Slugify\Slugify;
+use XisoDev\Slugify\SlugifyInterface;
 
 /**
  * SlugifyConverter
  *
- * @package   Cocur\Slugify\Bridge\Plum
+ * @package   XisoDev\Slugify\Bridge\Plum
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright 2015 Florian Eckerstorfer
  */

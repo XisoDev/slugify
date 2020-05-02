@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Tests;
+namespace XisoDev\Slugify\Tests;
 
-use Cocur\Slugify\Slugify;
+use XisoDev\Slugify\Slugify;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
@@ -19,7 +19,7 @@ use Mockery\Adapter\Phpunit\MockeryTestCase;
  * SlugifyTest
  *
  * @category  test
- * @package   org.cocur.slugify
+ * @package   org.xisodev.slugify
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @author    Ivo Bathke <ivo.bathke@gmail.com>
  * @author    Marchenko Alexandr
@@ -34,13 +34,13 @@ class SlugifyTest extends MockeryTestCase
     private $slugify;
 
     /**
-     * @var \Cocur\Slugify\RuleProvider\RuleProviderInterface|\Mockery\MockInterface
+     * @var \XisoDev\Slugify\RuleProvider\RuleProviderInterface|\Mockery\MockInterface
      */
     private $provider;
 
     protected function setUp()
     {
-        $this->provider = Mockery::mock('\Cocur\Slugify\RuleProvider\RuleProviderInterface');
+        $this->provider = Mockery::mock('\XisoDev\Slugify\RuleProvider\RuleProviderInterface');
         $this->provider->shouldReceive('getRules')->andReturn([]);
 
         $this->slugify = new Slugify([], $this->provider);
@@ -48,7 +48,7 @@ class SlugifyTest extends MockeryTestCase
 
     /**
      * @dataProvider defaultRuleProvider
-     * @covers       \Cocur\Slugify\Slugify::slugify()
+     * @covers       \XisoDev\Slugify\Slugify::slugify()
      */
     public function testSlugifyReturnsSlugifiedStringUsingDefaultProvider($string, $result)
     {
@@ -58,42 +58,42 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::addRule()
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::addRule()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testAddRuleAddsRule()
     {
         $this->assertInstanceOf(
-            'Cocur\Slugify\Slugify',
+            'XisoDev\Slugify\Slugify',
             $this->slugify->addRule('X', 'y')
         );
         $this->assertEquals('y', $this->slugify->slugify('X'));
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::addRules()
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::addRules()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testAddRulesAddsMultipleRules()
     {
         $this->assertInstanceOf(
-            'Cocur\Slugify\Slugify',
+            'XisoDev\Slugify\Slugify',
             $this->slugify->addRules(['x' => 'y', 'a' => 'b'])
         );
         $this->assertEquals('yb', $this->slugify->slugify('xa'));
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::activateRuleset()
+     * @covers \XisoDev\Slugify\Slugify::activateRuleset()
      */
     public function testActivateRulesetActivatesTheGivenRuleset()
     {
-        $provider = Mockery::mock('\Cocur\Slugify\RuleProvider\RuleProviderInterface');
+        $provider = Mockery::mock('\XisoDev\Slugify\RuleProvider\RuleProviderInterface');
         $provider->shouldReceive('getRules')->with('esperanto')->once()->andReturn(['ĉ' => 'cx']);
 
         $slugify = new Slugify(['rulesets' => []], $provider);
         $this->assertInstanceOf(
-            'Cocur\Slugify\Slugify',
+            'XisoDev\Slugify\Slugify',
             $slugify->activateRuleset('esperanto')
         );
 
@@ -101,15 +101,15 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::create()
+     * @covers \XisoDev\Slugify\Slugify::create()
      */
     public function testCreateReturnsAnInstance()
     {
-        $this->assertInstanceOf('Cocur\\Slugify\\SlugifyInterface', Slugify::create());
+        $this->assertInstanceOf('XisoDev\\Slugify\\SlugifyInterface', Slugify::create());
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::__construct()
+     * @covers \XisoDev\Slugify\Slugify::__construct()
      */
     public function testConstructWithOtherRegexp()
     {
@@ -119,8 +119,8 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::__construct()
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::__construct()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testDoNotConvertToLowercase()
     {
@@ -162,8 +162,8 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::__construct()
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::__construct()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testSlugifyDefaultsToSeparatorOption()
     {
@@ -175,8 +175,8 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::__construct()
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::__construct()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testSlugifyHonorsSeparatorArgument()
     {
@@ -188,7 +188,7 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testSlugifyOptionsArray()
     {
@@ -210,7 +210,7 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testSlugifyCustomRuleSet()
     {
@@ -263,7 +263,7 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testSlugifyLowercaseNotAfterRegexp()
     {
@@ -282,7 +282,7 @@ class SlugifyTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Slugify::slugify()
+     * @covers \XisoDev\Slugify\Slugify::slugify()
      */
     public function testSlugifyLowercaseAfterRegexp()
     {

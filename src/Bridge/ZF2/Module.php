@@ -1,19 +1,19 @@
 <?php
 
-namespace Cocur\Slugify\Bridge\ZF2;
+namespace XisoDev\Slugify\Bridge\ZF2;
 
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
 
 /**
  * Class Module
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @license    http://www.opensource.org/licenses/MIT The MIT License
  */
 class Module implements ServiceProviderInterface, ViewHelperProviderInterface
 {
-    const CONFIG_KEY = 'cocur_slugify';
+    const CONFIG_KEY = 'xisodev_slugify';
 
     /**
      * Expected to return \Zend\ServiceManager\Config object or array to
@@ -25,10 +25,10 @@ class Module implements ServiceProviderInterface, ViewHelperProviderInterface
     {
         return [
             'factories' => [
-                'Cocur\Slugify\Slugify' => 'Cocur\Slugify\Bridge\ZF2\SlugifyService'
+                'XisoDev\Slugify\Slugify' => 'XisoDev\Slugify\Bridge\ZF2\SlugifyService'
             ],
             'aliases' => [
-                'slugify' => 'Cocur\Slugify\Slugify'
+                'slugify' => 'XisoDev\Slugify\Slugify'
             ]
         ];
     }
@@ -43,7 +43,7 @@ class Module implements ServiceProviderInterface, ViewHelperProviderInterface
     {
         return [
             'factories' => [
-                'slugify' => 'Cocur\Slugify\Bridge\ZF2\SlugifyViewHelperFactory'
+                'slugify' => 'XisoDev\Slugify\Bridge\ZF2\SlugifyViewHelperFactory'
             ]
         ];
     }

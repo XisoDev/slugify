@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Tests\RuleProvider;
+namespace XisoDev\Slugify\Tests\RuleProvider;
 
-use Cocur\Slugify\RuleProvider\FileRuleProvider;
+use XisoDev\Slugify\RuleProvider\FileRuleProvider;
 use org\bovigo\vfs\vfsStream;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
 /**
  * FileRuleProviderTest
  *
- * @package   Cocur\Slugify\RuleProvider
+ * @package   XisoDev\Slugify\RuleProvider
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit
@@ -26,8 +26,8 @@ use Mockery\Adapter\Phpunit\MockeryTestCase;
 class FileRuleProviderTest extends MockeryTestCase
 {
     /**
-     * @covers \Cocur\Slugify\RuleProvider\FileRuleProvider::__construct()
-     * @covers \Cocur\Slugify\RuleProvider\FileRuleProvider::getRules()
+     * @covers \XisoDev\Slugify\RuleProvider\FileRuleProvider::__construct()
+     * @covers \XisoDev\Slugify\RuleProvider\FileRuleProvider::getRules()
      */
     public function testGetRulesReturnsRulesReadFromJsonFile()
     {

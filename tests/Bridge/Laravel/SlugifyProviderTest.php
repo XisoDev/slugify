@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Tests\Bridge\Laravel;
+namespace XisoDev\Slugify\Tests\Bridge\Laravel;
 
-use Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider;
+use XisoDev\Slugify\Bridge\Laravel\SlugifyServiceProvider;
 use Illuminate\Foundation\Application;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
@@ -19,7 +19,7 @@ use Mockery\Adapter\Phpunit\MockeryTestCase;
  * SlugifyServiceProviderTest
  *
  * @category   test
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @author     Colin Viebrock
@@ -42,7 +42,7 @@ class SlugifyProviderTest extends MockeryTestCase
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider::register()
+     * @covers \XisoDev\Slugify\Bridge\Laravel\SlugifyServiceProvider::register()
      */
     public function testRegisterRegistersTheServiceProvider()
     {
@@ -52,11 +52,11 @@ class SlugifyProviderTest extends MockeryTestCase
         $this->app->make('slugify');
 
         $this->assertArrayHasKey('slugify', $this->app);
-        $this->assertInstanceOf('Cocur\Slugify\Slugify', $this->app['slugify']);
+        $this->assertInstanceOf('XisoDev\Slugify\Slugify', $this->app['slugify']);
     }
 
     /**
-     * @covers \Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider::provides()
+     * @covers \XisoDev\Slugify\Bridge\Laravel\SlugifyServiceProvider::provides()
      */
     public function testContainsReturnsTheNameOfThProvider()
     {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of cocur/slugify.
+ * This file is part of xisodev/slugify.
  *
  * (c) Florian Eckerstorfer <florian@eckerstorfer.co>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cocur\Slugify\Bridge\Symfony;
+namespace XisoDev\Slugify\Bridge\Symfony;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -17,15 +17,15 @@ use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * CocurSlugifyExtension
+ * XisoDevSlugifyExtension
  *
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
  * @copyright  2012-2014 Florian Eckerstorfer
  * @license    http://www.opensource.org/licenses/MIT The MIT License
  */
-class CocurSlugifyExtension extends Extension
+class XisoDevSlugifyExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -45,18 +45,18 @@ class CocurSlugifyExtension extends Extension
         // Extract slugify arguments from config
         $slugifyArguments = array_intersect_key($config, array_flip(['lowercase', 'trim', 'strip_tags', 'separator', 'regexp', 'rulesets']));
 
-        $container->setDefinition('cocur_slugify', new Definition('Cocur\Slugify\Slugify', [$slugifyArguments]));
+        $container->setDefinition('xisodev_slugify', new Definition('XisoDev\Slugify\Slugify', [$slugifyArguments]));
         $container
             ->setDefinition(
-                'cocur_slugify.twig.slugify',
+                'xisodev_slugify.twig.slugify',
                 new Definition(
-                    'Cocur\Slugify\Bridge\Twig\SlugifyExtension',
-                    [new Reference('cocur_slugify')]
+                    'XisoDev\Slugify\Bridge\Twig\SlugifyExtension',
+                    [new Reference('xisodev_slugify')]
                 )
             )
             ->addTag('twig.extension')
             ->setPublic(false);
-        $container->setAlias('slugify', 'cocur_slugify');
-        $container->setAlias('Cocur\Slugify\SlugifyInterface', 'cocur_slugify');
+        $container->setAlias('slugify', 'xisodev_slugify');
+        $container->setAlias('XisoDev\Slugify\SlugifyInterface', 'xisodev_slugify');
     }
 }

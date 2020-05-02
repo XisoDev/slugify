@@ -1,11 +1,11 @@
 <?php
 
-namespace Cocur\Slugify\Tests\Bridge\League;
+namespace XisoDev\Slugify\Tests\Bridge\League;
 
-use Cocur\Slugify\Bridge\League\SlugifyServiceProvider;
-use Cocur\Slugify\RuleProvider\DefaultRuleProvider;
-use Cocur\Slugify\RuleProvider\RuleProviderInterface;
-use Cocur\Slugify\SlugifyInterface;
+use XisoDev\Slugify\Bridge\League\SlugifyServiceProvider;
+use XisoDev\Slugify\RuleProvider\DefaultRuleProvider;
+use XisoDev\Slugify\RuleProvider\RuleProviderInterface;
+use XisoDev\Slugify\SlugifyInterface;
 use League\Container\Container;
 use Mockery as m;
 use Mockery\Adapter\Phpunit\MockeryTestCase;

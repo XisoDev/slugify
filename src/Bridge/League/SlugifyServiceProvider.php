@@ -1,11 +1,11 @@
 <?php
 
-namespace Cocur\Slugify\Bridge\League;
+namespace XisoDev\Slugify\Bridge\League;
 
-use Cocur\Slugify\RuleProvider\DefaultRuleProvider;
-use Cocur\Slugify\RuleProvider\RuleProviderInterface;
-use Cocur\Slugify\Slugify;
-use Cocur\Slugify\SlugifyInterface;
+use XisoDev\Slugify\RuleProvider\DefaultRuleProvider;
+use XisoDev\Slugify\RuleProvider\RuleProviderInterface;
+use XisoDev\Slugify\Slugify;
+use XisoDev\Slugify\SlugifyInterface;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 
 class SlugifyServiceProvider extends AbstractServiceProvider

@@ -1,6 +1,6 @@
 <?php
 
-namespace Cocur\Slugify\Bridge\Nette;
+namespace XisoDev\Slugify\Bridge\Nette;
 
 use Nette\DI\CompilerExtension;
 use Nette\DI\ServiceDefinition;
@@ -8,7 +8,7 @@ use Nette\DI\ServiceDefinition;
 /**
  * SlugifyExtension
  *
- * @package    cocur/slugify
+ * @package    xisodev/slugify
  * @subpackage bridge
  * @author     Lukáš Unger <looky.msc@gmail.com>
  * @license    http://www.opensource.org/licenses/MIT The MIT License
@@ -20,11 +20,11 @@ class SlugifyExtension extends CompilerExtension
         $builder = $this->getContainerBuilder();
 
         $builder->addDefinition($this->prefix('slugify'))
-            ->setClass('Cocur\Slugify\SlugifyInterface')
-            ->setFactory('Cocur\Slugify\Slugify');
+            ->setClass('XisoDev\Slugify\SlugifyInterface')
+            ->setFactory('XisoDev\Slugify\Slugify');
 
         $builder->addDefinition($this->prefix('helper'))
-            ->setClass('Cocur\Slugify\Bridge\Latte\SlugifyHelper')
+            ->setClass('XisoDev\Slugify\Bridge\Latte\SlugifyHelper')
             ->setAutowired(false);
     }
 
